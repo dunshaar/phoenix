@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Политика обработки персональных данных | PHOENIX</title>
+  <meta name="description" content="Политика обработки персональных данных PHOENIX PUBG Clan." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+</head>
+<body>
+  <a class="skip" href="#main">Перейти к содержимому</a>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="index.html#top" aria-label="PHOENIX — на главную">
+        <span class="brand__mark" aria-hidden="true">PHX</span>
+        <span class="brand__text">
+          <span class="brand__name">PHOENIX</span>
+          <span class="brand__tag">PUBG Clan</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-controls="navMenu" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="nav" id="navMenu">
+        <a class="nav__link" href="index.html#about">О клане</a>
+        <a class="nav__link" href="index.html#system">Система</a>
+        <a class="nav__link" href="index.html#divisions">Дивизионы</a>
+        <a class="nav__link" href="index.html#roster">Ростер</a>
+        <a class="nav__link" href="index.html#media">Медиа</a>
+        <a class="nav__cta btn btn--ghost" href="index.html#join">Вступить</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="privacy-page" id="main">
+    <div class="container">
+      <div class="privacy-wrap">
+        <h1>Политика обработки персональных данных</h1>
+        <p class="micro">Версия: 1.0 • Дата публикации: <span id="privacyDate"></span></p>
+
+        <p>Настоящая политика определяет порядок обработки и защиты персональных данных, которые пользователь предоставляет при заполнении формы на сайте PHOENIX.</p>
+
+        <h2>1. Какие данные мы собираем</h2>
+        <ul>
+          <li>Имя/ник</li>
+          <li>Email</li>
+          <li>Discord</li>
+          <li>Сообщение/анкета кандидата</li>
+        </ul>
+
+        <h2>2. Цель обработки</h2>
+        <p>Данные используются исключительно для связи с кандидатом, проведения отбора и коммуникации по вопросам вступления в клан.</p>
+
+        <h2>3. Правовое основание</h2>
+        <p>Обработка осуществляется на основании добровольного предоставления данных пользователем и согласия, выраженного отправкой формы.</p>
+
+        <h2>4. Хранение и доступ</h2>
+        <p>Данные передаются через Formspree и хранятся у получателя формы. Мы не продаём и не передаём данные третьим лицам, кроме случаев, когда это необходимо для работы формы или требуется законом.</p>
+
+        <h2>5. Сроки</h2>
+        <p>Данные хранятся столько, сколько необходимо для целей отбора, либо до запроса пользователя об удалении.</p>
+
+        <h2>6. Контакты</h2>
+        <p>По вопросам обработки данных можно связаться через контакт, который указан при ответе на заявку, либо через Discord-канал клана.</p>
+
+        <p><a class="link" href="index.html#join">← Вернуться на сайт</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="brand brand--footer">
+          <span class="brand__mark" aria-hidden="true">PHX</span>
+          <span class="brand__text">
+            <span class="brand__name">PHOENIX</span>
+            <span class="brand__tag">PUBG Clan</span>
+          </span>
+        </div>
+        <p class="micro">© <span id="year"></span> PHOENIX. Все права защищены.</p>
+      </div>
+
+      <div class="footer__links">
+        <a class="link" href="index.html#top">Главная</a>
+        <a class="link" href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const d = new Date();
+    const pad = (n) => String(n).padStart(2,'0');
+    const txt = `${pad(d.getDate())}.${pad(d.getMonth()+1)}.${d.getFullYear()}`;
+    const el = document.getElementById('privacyDate');
+    if (el) el.textContent = txt;
+  </script>
+</body>
+</html>
